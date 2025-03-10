@@ -81,6 +81,8 @@ export class WebSocketClient {
    */
   handleMessage(data) {
     try {
+      console.log(data);
+      
       const message = JSON.parse(data);
       
       if (this.messageHandler) {

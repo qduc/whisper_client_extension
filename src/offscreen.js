@@ -138,6 +138,7 @@ async function processAudio(stream, settings) {
   // Connect the nodes
   source.connect(workletNode);
   workletNode.connect(audioContext.destination);
+  source.connect(audioContext.destination); // Connect to destination for playback
 }
 
 async function stopCapture() {
